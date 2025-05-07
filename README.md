@@ -21,7 +21,7 @@ npm install
 ```bash
 npm start
 ``
-## NPM START
+## 20x WORKFLOWS NEED
 ```bash
 name: SaGor BoT
 
