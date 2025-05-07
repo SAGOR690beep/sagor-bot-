@@ -4,13 +4,13 @@
 
 </h3>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Neuton&font-weight=bold&size=20&color=FFFF00&background=FF0000&center=true&vCenter=true&width=400&height=60&lines=HELLO+FRIENDS+I'M+MR+ARIF+BABU+😈+🤞;ARIF+PROJECT+BOT;ARIF+FCA+BOT;THANKYOU+FOR+USING+ARIF+PROJECT&border=20px+solid+000000&speed=100)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Neuton&font-weight=bold&size=20&color=FFFF00&background=FF0000&center=true&vCenter=true&width=400&height=60&lines=HELLO+FRIENDS+I'G+GK+MOHAMMAD+SAGOR+😈+🤞;SAGOR+PROJECT+BOT;SAGOR+FCA+BOT;THANKYOU+FOR+USING+SAGOR+PROJECT&border=20px+solid+000000&speed=100)](https://git.io/typing-svg)
 
-[![Facebook](https://img.shields.io/badge/Facebook-green?style=for-the-badge&logo=facebook)](https://www.facebook.com/profile.php?id=61553634015672&mibextid=kFxxJD)
+[![Facebook](https://img.shields.io/badge/Facebook-green?style=for-the-badge&logo=facebook)](https://www.facebook.com/profile.php?id=61573038178753&mibextid=kFxxJD)
 [![Instagram](https://img.shields.io/badge/Instagram-purple?style=for-the-badge&logo=instagram)](😃)
-[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@khanarif8973)
+[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube)]( ERROR )
 
-![Image](https://i.imgur.com/cWkpLqT.jpeg)
+![Image](https://i.imgur.com/g3jPjAw.jpeg)
 
 
 ## NPM INSTALL 
@@ -21,3 +21,42 @@ npm install
 ```bash
 npm start
 ``
+## NPM START
+```bash
+name: SaGor BoT
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    # Step to check out the repository code
+    - uses: actions/checkout@v2
+
+    # Step to set up the specified Node.js version
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    # Step to install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step to run the bot with the correct port
+    - name: Start the bot
+      env:
+        PORT: 8080
+      run: npm start
+```
